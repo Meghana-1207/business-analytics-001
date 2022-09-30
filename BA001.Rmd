@@ -1,0 +1,31 @@
+---
+title: "BA001"
+author: "Meghana Reddy"
+date: "2022-09-30"
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+```{r}
+library(ISLR)
+library(readr)
+archive_1_ <- read_csv("C:/Users/Windows/Downloads/archive (1).zip")
+```
+```{r}
+summary(archive_1_)
+```
+```{r}
+
+max(archive_1_$Advertising)
+IQR(archive_1_$Price)
+data <- plot(archive_1_$Sales,archive_1_$Price)
+cor(archive_1_$Sales,archive_1_$Price)
+
+```
+##It is observed that the price and sales correlation is negative and not perfectly correlated with 44%
